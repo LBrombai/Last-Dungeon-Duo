@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" fill="none">
+  <title>Decorative sword emblem</title>
+  <defs><linearGradient id="gold"><stop stop-color="#95672d"/><stop offset=".5" stop-color="#f4cf8c"/><stop offset="1" stop-color="#95672d"/></linearGradient></defs>
+  <g stroke="url(#gold)" stroke-width="1.4">
+    <path d="M0 83H111m98 0h111M111 80l3 3-3 3-3-3Zm98 0 3 3-3 3-3-3Z"/>
+    <circle cx="160" cy="61" r="22"/><path d="M141 45a25 25 0 0 0 0 33m38-33a25 25 0 0 1 0 33M160 4v90m-5-67h10m-17 11h24m-12-34-3 16 3 70 3-70ZM156 88l4 9 4-9m-31-46 6 3m42 0 6-3m-54 39 6-3m42 0 6 3"/>
+  </g>
+</svg>

@@ -92,14 +92,16 @@ impedir bypass para garantir bloqueio quando CI falhar. Confirme isso com
 um PR propositalmente falho. Ambos os desenvolvedores precisam executar
 o projeto na própria máquina e revisar um PR um do outro.
 
-O repositório local reúne esta entrega em `m0/foundation`; não simula PRs
-revisados, execuções no GitHub nem validações feitas por outra pessoa.
+Repositório: https://github.com/LBrombai/Last-Dungeon-Duo. Como estava vazio,
+a fundação funcional foi publicada como baseline na main. O PR #1 em
+`m0/foundation` conclui os créditos e o registro de aceite. A main exige
+check aprovado e uma aprovação, inclusive para administradores. O CI da
+main passou; validações humanas e revisão cruzada permanecem pendentes.
 
 ## Verificações e limitações
 
 Veja `M0-ACCEPTANCE.md` para as 12 tarefas, os 14 critérios e evidências.
-Os nomes completos dos dois desenvolvedores ainda precisam de confirmação;
-os créditos deixam o segundo nome explicitamente pendente.
+Créditos: Lucas Brombai e Flávio Portela Estelato.
 
 As dependências estão fixadas e o lockfile deve ser versionado. A auditoria
 de produção passou sem vulnerabilidades. A auditoria completa aponta seis

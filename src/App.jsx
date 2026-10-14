@@ -29,7 +29,7 @@ export default function App() {
   }, [goTo]);
   const Screen = screens[screen] ?? MainMenu;
   return (
-    <ScreenFrame>
+    <ScreenFrame className={screen === "menu" ? "screen-frame--menu" : ""}>
       <Screen>{screen === "expedition" && <SmokeTest />}</Screen>
     </ScreenFrame>
   );

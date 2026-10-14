@@ -1,22 +1,226 @@
+@font-face {
+  font-family: "Cinzel";
+  src: url("../../assets/fonts/Cinzel.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+}
+
+.screen-frame--menu {
+  position: relative;
+  container-type: inline-size;
+  border: 0;
+  overflow: hidden;
+}
+
+.screen-frame--menu .screen-content {
+  padding: 0;
+  gap: 0;
+}
+
 .main-menu {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  color: #f3e8d4;
+  font-family: Georgia, "Times New Roman", serif;
+  background: url("../../assets/menu-background.png") center / cover no-repeat;
+}
+
+.main-menu::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    radial-gradient(
+      ellipse 27% 70% at 50% 52%,
+      #03090ef0 0%,
+      #03090eb3 50%,
+      transparent 100%
+    ),
+    linear-gradient(
+      90deg,
+      #00000030,
+      transparent 25%,
+      transparent 75%,
+      #00000030
+    );
+}
+
+.main-menu__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.main-menu__header {
+  position: absolute;
+  top: 2.7%;
+  left: 15%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
 }
+
+.main-menu__emblem {
+  width: 18cqw;
+  height: 5.6cqw;
+  margin-bottom: 0.65cqw;
+  filter: drop-shadow(0 0 0.5cqw #dba34d35);
+}
+
+.main-menu .eyebrow {
+  color: #d4a363;
+  font-size: 1cqw;
+  letter-spacing: 0.48em;
+  padding-left: 0.48em;
+  margin-bottom: 0.65cqw;
+}
+
 .main-menu h1 {
-  font-family: var(--font-title);
-  font-size: clamp(1.5rem, 5vw, 4rem);
-  letter-spacing: 0.16em;
-  line-height: 1.1;
   margin: 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 700;
+  font-size: 6.6cqw;
+  line-height: 0.98;
+  letter-spacing: 0.025em;
+  filter: drop-shadow(0 0.12cqw 0.12cqw #000) drop-shadow(0 0 0.6cqw #e8ac5226);
 }
-.eyebrow {
-  color: var(--color-accent);
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
+
+.main-menu h1 span {
+  display: block;
+  background: linear-gradient(
+    110deg,
+    #aa8150 0%,
+    #fff2d3 24%,
+    #dbba83 40%,
+    #ffefd1 57%,
+    #bd915b 73%,
+    #f5e2bb 90%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.subtitle,
-small {
-  color: var(--color-muted);
+
+.main-menu h1 span:first-child {
+  font-size: 1.02em;
+  margin-bottom: 0.25cqw;
+}
+
+.main-menu__title-rule {
+  width: 34cqw;
+  height: 2.1cqw;
+  margin-top: -1.1cqw;
+}
+
+.main-menu .subtitle {
+  position: absolute;
+  top: 43.2%;
+  left: 10%;
+  width: 80%;
+  color: #c4c0b7;
+  font-size: 1.35cqw;
+  letter-spacing: 0.22em;
+  text-shadow: 0 0.1cqw 0.35cqw #000;
+}
+
+.main-menu .menu-list {
+  position: absolute;
+  top: 50.65%;
+  left: 38.8%;
+  width: 22.4%;
+  gap: 0.35cqw;
+  overflow: visible;
+}
+
+.main-menu .menu-option {
+  position: relative;
+  height: 3.45cqw;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f3e8d4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55cqw;
+  line-height: 1;
+  text-shadow: 0 0.1cqw 0.3cqw #000;
+  isolation: isolate;
+}
+
+.main-menu .menu-option::before {
+  position: absolute;
+  inset: -0.65cqw -1.3cqw;
+  z-index: -1;
+  content: "";
+  background:
+    url("../../assets/menu-selection.svg") center / 100% 100% no-repeat;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-menu .menu-option.selected {
+  color: #f4d79c;
+  background: radial-gradient(ellipse, #ac732a29, transparent 75%);
+  outline: none;
+  text-shadow: 0 0 0.7cqw #ebb45866;
+}
+
+.main-menu .menu-option.selected::before {
+  opacity: 1;
+  filter: drop-shadow(0 0 0.45cqw #ecb45465);
+}
+
+.main-menu .menu-option:disabled {
+  color: #807c75;
+  opacity: 0.75;
+}
+
+.main-menu .menu-option:disabled::after {
+  position: absolute;
+  top: calc(100% + 0.35cqw);
+  left: 8%;
+  width: 84%;
+  height: 1.2cqw;
+  content: "";
+  background: url("../../assets/menu-rule.svg") center / 100% 100% no-repeat;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.main-menu .menu-option:nth-child(3) {
+  margin-top: 1.7cqw;
+}
+
+.main-menu__footer-rule {
+  position: absolute;
+  top: 79.1%;
+  left: 42%;
+  width: 16%;
+  height: 2.2cqw;
+  pointer-events: none;
+}
+
+.main-menu__version {
+  position: absolute;
+  top: 85.3%;
+  left: 30%;
+  width: 40%;
+  color: #bab8b2;
+  font-size: 1cqw;
+  text-shadow: 0 0.1cqw 0.3cqw #000;
+}
+
+@media (forced-colors: active) {
+  .main-menu h1 span {
+    background: none;
+    -webkit-text-fill-color: CanvasText;
+  }
+
+  .main-menu .menu-option.selected {
+    outline: 2px solid Highlight;
+  }
 }

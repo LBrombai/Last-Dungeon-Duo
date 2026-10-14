@@ -21,14 +21,15 @@ substitui as referências dos documentos a código anterior e avanço para M1.
 7. **Concluído:** tokens, ScreenFrame 16:9, Button, MenuList e CSS.
 8. **Concluído localmente:** menu com teclado/mouse, seleção visível,
    Continuar desativado, versão originada em package.json.
-9. **Parcial:** todas as telas e navegação funcionam; segundo nome nos
-   créditos aguarda informação. Nenhum nome foi inventado.
+9. **Concluído na branch de entrega:** telas, navegação e créditos com
+   Lucas Brombai e Flávio Portela Estelato, confirmado pelo usuário.
 10. **Concluído:** plano de material sólido e luz via Canvas; renderização
     observada tanto no dev quanto no preview, sem erros de console.
 11. **Parcial:** README e checklist completos, conferência local feita;
     revisão cruzada humana permanece pendente.
-12. **Parcial:** workflow configurado e seus comandos passaram localmente;
-    execução no GitHub e proteção da main aguardam repositório remoto.
+12. **Configuração concluída:** workflow executou com sucesso na main.
+    Proteção exige check e uma aprovação, inclusive para administradores.
+    O teste prático de recusa com CI falhando ainda não foi executado.
 
 ## 14 critérios de aceite
 
@@ -44,8 +45,9 @@ main remota protegida. Portanto o marco ainda não tem aceite integral.
 4. **Passou:** probe temporário em src/game importando React falhou com
    lint/style/noRestrictedImports; removido, lint voltou a passar.
 5. **Passou:** quatro arquivos Vitest, 11 testes, todos em ambiente Node.
-6. **Pendente externo:** workflow pronto; não há comprovação de execução
-   remota nem de bloqueio de merge com check falhando.
+6. **CI na main passou e proteção configurada:** GitHub exige check e
+   uma aprovação. Execução de PR deve passar antes de mesclar. Não foi
+   criado um PR propositalmente falho para testar a recusa de merge.
 7. **Passou:** quatro opções na ordem correta, Continuar desativado e
    versão 0.0.1 visível, inclusive no preview.
 8. **Passou localmente:** teclado pulou Continuar, Enter abriu Opções,
@@ -76,13 +78,15 @@ main remota protegida. Portanto o marco ainda não tem aceite integral.
 - Capturas `../menu-m0.png` e `../scene-m0.png` registram o preview final.
 - `M0-FILES.txt` lista todos os arquivos da entrega; node_modules e dist
   são saídas locais reproduzíveis e ficam fora do versionamento.
-- Não houve publicação, criação de PRs, proteção de branch nem alegação
-  de revisão por outro desenvolvedor. O histórico local usa mensagens
-  montadas pelo adaptador configurado do Commitizen.
+- Repositório: https://github.com/LBrombai/Last-Dungeon-Duo. Baseline
+  funcional publicada em main; proteção aplicada antes dos ajustes finais.
+  PR #1: https://github.com/LBrombai/Last-Dungeon-Duo/pull/1 (rascunho).
+  CI aprovado na main: https://github.com/LBrombai/Last-Dungeon-Duo/actions/runs/38491416500.
+  Não foi alegada revisão humana. As mensagens de commit foram montadas
+  pelo adaptador configurado do Commitizen.
 
 ## Encerramento do marco
 
-Preencher o segundo nome, escolher o novo repositório GitHub, publicar a
-entrega por PR, exigir aprovação e check na main, testar bloqueio de CI
-e completar a revisão em dupla. Esses itens são necessários antes de
+Revisar e aprovar o PR de conclusão, verificar CI do PR, testar bloqueio
+com CI falhando e completar a revisão em dupla nas duas máquinas. Esses itens são necessários antes de
 declarar todos os 14 critérios aceitos ou iniciar M1.
