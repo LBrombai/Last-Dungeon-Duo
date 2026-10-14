@@ -1,0 +1,6 @@
+.smoke-test {
+  width: min(30rem, 100%);
+  height: clamp(8rem, 35vh, 20rem);
+  background: #101419;
+  border: 1px solid var(--color-border);
+}
