@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 84" fill="none">
+  <title>Decorative selection frame</title>
+  <defs><linearGradient id="gold" x2="0" y2="1"><stop stop-color="#d3a452"/><stop offset=".5" stop-color="#ffe1a0"/><stop offset="1" stop-color="#c38f3c"/></linearGradient></defs>
+  <g stroke="url(#gold)" stroke-width="1.1">
+    <path d="M25 13H195m30 0h170v58H225m-30 0H25ZM29 17H391V67H29ZM210 1l8 10-8 10-8-10Zm0 4 4 6-4 6-4-6Zm0 59 8 10-8 9-8-9Z"/>
+    <path d="M25 13c0 13-13 8-11 21 1 7-2 8-11 8 10 0 12 5 11 10-2 12 11 10 11 19M395 13c0 13 13 8 11 21-1 7 2 8 11 8-10 0-12 5-11 10 2 12-11 10-11 19M25 17l-5 9 5 5m0 22-5 5 5 9m370-50 5 9-5 5m0 22 5 5-5 9"/>
+    <path d="M8 37v10m404-10v10M40 13l-6 7m346-7 6 7M40 71l-6-7m346 7 6-7"/>
+  </g>
+</svg>

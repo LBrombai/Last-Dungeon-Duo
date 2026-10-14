@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 32" fill="none">
+  <title>Decorative gold divider</title>
+  <defs><linearGradient id="gold"><stop stop-color="#a7732b" stop-opacity="0"/><stop offset=".28" stop-color="#c99342"/><stop offset=".5" stop-color="#f0d29a"/><stop offset=".72" stop-color="#c99342"/><stop offset="1" stop-color="#a7732b" stop-opacity="0"/></linearGradient></defs>
+  <g stroke="url(#gold)" stroke-width="1.1"><path d="M0 16h185m30 0h185M0 18l170-2m60 0 170 2M200 6l10 10-10 10-10-10Zm0 5 5 5-5 5-5-5Z"/></g>
+</svg>
