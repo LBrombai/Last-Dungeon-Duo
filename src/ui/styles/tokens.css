@@ -1,0 +1,12 @@
+:root {
+  --color-background: #101215;
+  --color-text: #e8e3d8;
+  --color-muted: #a9aaa9;
+  --color-accent: #c2a572;
+  --color-border: #3e4143;
+  --font-body: system-ui, sans-serif;
+  --font-title: Georgia, serif;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+}

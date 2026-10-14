@@ -1,0 +1,21 @@
+.screen-frame {
+  width: min(100vw, calc(100dvh * 16 / 9));
+  aspect-ratio: 16 / 9;
+  background: radial-gradient(
+    ellipse at top,
+    #252b30,
+    var(--color-background) 70%
+  );
+  border: 1px solid var(--color-border);
+  overflow: auto;
+}
+.screen-content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+  text-align: center;
+}

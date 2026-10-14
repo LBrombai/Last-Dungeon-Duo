@@ -1,0 +1,29 @@
+.menu-list {
+  display: grid;
+  gap: var(--space-sm);
+  width: min(22rem, 100%);
+}
+.menu-option {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.4rem 1.5rem;
+  color: var(--color-text);
+  font: inherit;
+  cursor: pointer;
+}
+.menu-option.selected {
+  border-color: var(--color-accent);
+  background: #c2a57212;
+  color: var(--color-accent);
+  outline: none;
+}
+.menu-option:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.menu-list {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
