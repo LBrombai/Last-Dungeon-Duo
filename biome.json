@@ -1,0 +1,151 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "includes": ["**", "!dist", "!node_modules"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended"
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["src/game/**", "src/data/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "paths": {
+                  "react": "Keep rules and data independent of rendering and stores.",
+                  "react-dom": "Keep rules and data independent of rendering and stores.",
+                  "three": "Keep rules and data independent of rendering and stores.",
+                  "@react-three/fiber": "Keep rules and data independent of rendering and stores.",
+                  "zustand": "Keep rules and data independent of rendering and stores."
+                },
+                "patterns": [
+                  {
+                    "group": [
+                      "react/*",
+                      "react-dom/*",
+                      "three/*",
+                      "@react-three/*",
+                      "zustand/*",
+                      "**/ui/**",
+                      "**/scene/**",
+                      "**/store/**"
+                    ],
+                    "message": "Forbidden layer dependency."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "src/data/**",
+        "!src/data/__tests__/**",
+        "!src/data/index.js"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["**"],
+                    "message": "Data modules contain values only; imports are forbidden."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/store/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["**/ui/**", "**/scene/**"],
+                    "message": "Forbidden layer dependency."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/ui/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": [
+                      "**/scene/**",
+                      "**/game/state*",
+                      "**/game/reducer*",
+                      "**/game/rng*",
+                      "**/game/systems/**"
+                    ],
+                    "message": "Forbidden layer dependency."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/scene/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": [
+                      "**/ui/**",
+                      "**/game/actions*",
+                      "**/game/state*",
+                      "**/game/reducer*",
+                      "**/game/rng*",
+                      "**/game/systems/**"
+                    ],
+                    "message": "Forbidden layer dependency."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
